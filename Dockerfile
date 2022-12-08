@@ -1,3 +1,4 @@
+# Author: Group 5
 FROM continuumio/miniconda3
 RUN conda update -n base -c conda-forge -y conda
 RUN conda install -c conda-forge -y r-base
