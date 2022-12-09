@@ -4,7 +4,6 @@ RUN apt-get update
 RUN apt-get install -y libfontconfig1-dev
 RUN conda install -c conda-forge -y r-base
 RUN conda install -c conda-forge -y scikit-learn>=1.1.3
-RUN conda install -c conda-forge -y altair_saver
 RUN conda install -c conda-forge -y lxml
 RUN conda install -c conda-forge -y pandoc
 RUN pip install joblib --quiet
