@@ -3,15 +3,13 @@ FROM continuumio/miniconda3
 
 RUN apt-get update
 RUN apt-get -y --no-install-recommends install
+RUN apt-get install -y r-base r-base-dev
 RUN apt-get install -y libfontconfig1-dev
 RUN apt-get install -y libcurl4-openssl-dev
 RUN apt-get install -y libssl-dev
 RUN apt-get install -y libxml2-dev
 
-ENV PATH="/opt/conda/bin:${PATH}"
-
 RUN conda update -n base -c conda-forge -y conda
-RUN conda install -c conda-forge -y r-base
 RUN conda install -c conda-forge -y altair
 RUN conda install -c conda-forge -y scikit-learn>=1.1.3
 RUN conda install -c conda-forge -y lxml
