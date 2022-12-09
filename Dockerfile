@@ -21,4 +21,11 @@ RUN pip install psutil --quiet
 RUN pip install docopt-ng --quiet
 RUN pip install vl-convert-python --quiet
 
-RUN Rscript -e "install.packages(c('pandoc', 'knitr', 'kableExtra', 'tidyverse', 'caret', 'xfun'), repos='https://cran.rstudio.com/')"
+RUN Rscript -e "install.packages('tidyverse', repos='https://cran.rstudio.com/')"
+RUN Rscript -e "install.packages('broom', repos='https://cran.rstudio.com/')"
+RUN Rscript -e "install.packages('docopt', repos='https://cran.rstudio.com/')"
+RUN Rscript -e "install.packages('pandoc', repos='https://cran.rstudio.com/')"
+RUN Rscript -e "install.packages('knitr', repos='https://cran.rstudio.com/')"
+RUN Rscript -e "install.packages('kableExtra', repos='https://cran.rstudio.com/')"
+RUN Rscript -e "install.packages('caret', repos='https://cran.rstudio.com/')"
+RUN Rscript -e "install.packages('xfun', repos='https://cran.rstudio.com/')"
