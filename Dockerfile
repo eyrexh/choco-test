@@ -1,8 +1,8 @@
-# Author: Group 5
 FROM continuumio/miniconda3
 RUN conda update -n base -c conda-forge -y conda
+RUN apt-get update
+RUN apt-get install -y libfontconfig1-dev
 RUN conda install -c conda-forge -y r-base
-# RUN conda install -c conda-forge -y r-base-dev
 RUN conda install -c conda-forge -y scikit-learn>=1.1.3
 RUN conda install -c conda-forge -y altair_saver
 RUN conda install -c conda-forge -y lxml
